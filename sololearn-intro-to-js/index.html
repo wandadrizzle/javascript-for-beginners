@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="01-welcome.js" defer></script>
+    <script src="02-going-deeper-with-js.js" defer></script>
+    <script src="03-working-with-data.js" defer></script>
+    <script src="04-control-flow.js" defer></script>
+    <title>Introduction to JavaScript</title>
+    <style>
+        body {
+            font-size: Arial, sans-serif;
+            /*text-align: center;*/
+            padding-top: 50px;
+        }
+
+        .module-two{
+            background-color: lavender;
+            color: midnightblue;
+        }
+
+        .module-two h3{
+            color: rgb(199, 97, 97);
+        }
+
+        #module-three {
+            background-color: aqua;
+        }
+
+        #module-three h2 {
+            text-align: center;
+        }
+
+        #third-module {
+            border: 3px solid red;
+        }
+
+        #table {
+            background-color: #525252;
+            padding: 20px;
+            color: white;
+        }
+
+        #dataTable {
+            width: 60%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            color: white;
+        }
+
+        th, td {
+            border: 1px solid #DDDDDD;
+            padding: 8px;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1 id="heading-one">Introduction to JS</h1>
+    <p id="p1">Amongst other things, I just want to be able to code a little better than yesterday.</p>
+    <p id="ipsum">It has been said that the great scientific disciplines are examples of giants standing on the shoulders of other giants. It has also been said that the software industry is an example of midgets standing on the toes of other midgets. (Alan Cooper) It is practically impossible to teach good programming style to students that have had prior exposure to BASIC. As potential programmers, they are mentally mutilated beyond hope of regeneration. (E. W. Dijkstra) Walking on water and developing software from a specification are easy if both are frozen. (Edward V Berard) It would appear that we have reached the limits of what it is possible to achieve with computer technology, although one should be careful with such statements, as they tend to sound pretty silly in 5 years. (John Von Neumann, circa 1949)</p>
+    <button onclick="alert('Module 1 Compelted! 😊')">Click Me!</button>
+    <hr>
+    <div id="module-two">
+        <h2 id="second-module">Going Deeper with JavaScript</h2>
+        <button onclick="sayHello()">Hi There!</button>
+        <button id="hello-button">Hi There Again!</button>
+        <p id="functions-text">Hardware: The parts of a computer system that can be kicked. (Jeff Pesis) Computers are like bikinis. They save people a lot of guesswork. (Sam Ewing) Computers are useless. They can only give you answers. (Pablo Picasso) I don’t care if it works on your machine! We are not shipping your machine! (Vidiu Platon)</p>
+        <h3 contenteditable="">Try to edit me</h3>
+        <h4 id="user-name"></h4>
+    
+        <!--The name attribute is required to store data correctly.-->
+        <button onclick="greet()">Click Me!</button> &nbsp;
+        <label for="surname">Surname </label>
+        <input type="text" name="surname" id="surname"> &nbsp;
+        <label for="email">Email </label>
+        <input type="email" name="email" id="email">
+        <h3>Ensure you wnter valid color names.</h3>
+        <form action="" method="get" id="myForm">
+            <label for="bg">Enter a background colour:</label>
+            <input type="text" name="background" id="bg" value="grey"> <br><br>
+            <label for="c">Enter text colour:</label>
+            <input type="text" name="colour" id="c" value="white">
+            <input type="button" onclick="changeStyle()" value="Change">
+        </form>
+    </div>
+    <hr>
+    <div id="module-three">
+        <h2 id="third-module">Working with Data</h2>
+        <form action="" id="myOtherForm">
+            <label for="c1">Tick this box</label>
+            <input type="checkbox" name="checkbox" id="c1"> <br>
+            <input type="button" onclick="checkTicked()" value="Check if Ticked">
+        </form>
+        <h2>Registration Form</h2>
+        <form action="" id="register">
+            <label for="email3">Enter email:</label> &nbsp; &nbsp;  &nbsp;
+            <input type="text" name="email" id="email3"> <br>
+
+            <label for="newsletter-passkey">Enter pasword:</label> &nbsp;
+            <input type="password" name="pass" id="newsletter-passkey" autocomplete="newsletter-passkey"> <br>
+
+            <input type="checkbox" name="subscribe" id="subscribe">
+            <label for="subscribe">Subscribe to our newsletter</label> <br><br>
+
+            <input type="button" value="SUBMIT" onclick="processFormData()">
+        </form>
+        <div id="table">
+            <h2>Database Simulation</h2>
+            <table id="dataTable">
+                <tr>
+                    <th>email</th>
+                    <th>password</th>
+                    <th>isSubscribed</th>
+                </tr>
+            </table>
+        </div>
+        <p id="strange">Why’s he gotta kick the door? You’re going to take out the demigorgon with a slingshot? Nancy, seriously, you're gonna be so cool now, it's ridiculous. Friends don't lie. Nobody normal ever accomplished anything meaningful in this world. This is not yours to fix alone. You act like you’re all alone out there in the world, but you’re not. You’re not alone.</p>
+        <h3>AND and OR operation on user inputs</h3>
+        <p>&amp;&amp; is the symbol for the AND operation in JavaScript syntax.</p>
+        <p>|| is the symbol for the OR operation in JavaScript syntax.</p>
+        <p>Select and submit different combinations of inputs to see the result.</p>
+        <form onsubmit="performAndOperation(event)">
+
+            <input type="checkbox" name="input1" id="input1">
+            <label for="input1">Input 1</label> <br>
+            
+            <input type="checkbox" name="input2" id="input2">
+            <label for="input2">Input 2</label> <br><br>
+            <input type="button" onclick="performAndOperation()" value="Submit">
+
+        </form>
+    </div>
+</body>
+</html>
