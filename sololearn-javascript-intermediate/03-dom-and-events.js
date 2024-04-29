@@ -55,5 +55,62 @@ var bodiyadi = document.getElementsByTagName('body')[0];
 bodiyadi.style.color = '#6600FF'
 bodiyadi.style.backgroundColor = 'black'
 
-//CREATING ELEMENTS
+//CREATING ELEMENTS - 29 April 2024
+
+//<body onload="doSomething()"> You could have put this on the HTML side
+window.onload = function() {
+  var p = document.createElement("p");
+  var node = document.createTextNode("Some new text");
+
+  p.appendChild(node);
+
+  var div = document.getElementById("new-demo");
+  div.appendChild(p);
+
+  var newP2 = document.createElement('p');
+  var node2 = document.createTextNode("An empty street, an empty house A hole inside my heart I'm all alone, the rooms are getting smaller I wonder how, I wonder why I wonder where they are The days we had, the songs we sang together Oh, yeah");
+  newP2.appendChild(node2);
+
+  var parent = document.getElementById("new-demo");
+  var child = document.getElementById("p1");
+  //child.parentNode.removeChild(child);
+  //parent.removeChild(child)
+  parent.replaceChild(newP2, child)
+
+  var btn = document.getElementById('listen')
+  btn.addEventListener("click", myFunction);
+  
+  function myFunction() {
+    alert(Math.random());
+    BigInt.removeEventListeer("click", myFunction)
+  }
+}
+
+// starting position
+var pos = 0; 
+//our box element
+var box = document.getElementById("box");
+var t = setInterval(move, 100);
+
+function move() {
+  if(pos >= 150) {
+    clearInterval(t);
+  }
+  else {
+    pos += 1;
+    box.style.left = pos+"px";
+  }
+}
+
+function show(){
+  alert("Hi there!");
+}
+//The onchange event is mostly used on textboxes. The event handler gets called when the text inside the textbox changes and focus is lost from the element.
+function change(){
+  var x = document.getElementById('gama')
+  x.value = x.value.toUpperCase();
+
+}
+
+//element.addEventListener(event, function, useCapture);
 
