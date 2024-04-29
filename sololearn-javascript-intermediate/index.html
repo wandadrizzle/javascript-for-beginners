@@ -6,6 +6,22 @@
     <script src="01-objects.js" defer></script> <!---->
     <script src="03-dom-and-events.js" defer></script>
     <title>JavaScript Intermediate</title>
+    <style>
+        #container {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            position: relative;
+        }
+
+        #box {
+            width: 50px;
+            height: 50px;
+            background: red;
+            position: absolute;
+
+        }
+    </style>
 </head>
 <body style="text-align: center;">
     <div id="output"></div><!---->
@@ -29,6 +45,16 @@
     <div class="module-three">
         <img id="myimg" src="assets/orange-svgrepo-com.svg" alt="fruit svg"  width="150"/> <br>
         <a href="https://twitter.com/wandadrizzle" target="_blank">Find Me Here</a>
+    </div>
+    <div id="new-demo" style="color: red;">
+        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quidem reiciendis error vitae cupiditate distinctio illum porro, quibusdam a eaque repudiandae? Reprehenderit soluta eveniet tempora odit velit recusandae rem voluptates.</p>
+        <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quidem reiciendis error vitae cupiditate distinctio illum porro, quibusdam a eaque repudiandae? Reprehenderit soluta eveniet tempora odit velit recusandae rem voluptates.</p>
+    </div>
+    <div id="container">
+        <div id="box"></div>
+        <button onclick="show()">Handle an Event</button>
+        <button id="listen">Listen to Event</button>
+        <input type="text" id="gama" onchange="change()">
     </div>
 </body>
 </html>
